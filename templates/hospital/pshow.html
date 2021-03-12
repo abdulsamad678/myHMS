@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRM</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
+
+
+<div class="col-md-7">
+		<h5>PRESCRIPTION FOR PATIENT</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="">Advice From Doctor</a>
+			<table class="table table-sm">
+				<tr>
+					
+					<th>Medicine</th>
+					<th>diet_advice</th>
+					<th>Test</th>
+					<th>Action</th>
+				</tr>
+                 {% for i in gform %}
+    <tr>
+        
+        <th>{{ i.medicine}}</th>
+        <th>{{ i.diet_advice}}</th>
+        <th>{{ i.test }}</th>
+        
+        <th>
+            
+        
+            <a class="btn btn-danger" href="pde/{{ i.id }}">Delete</a>
+        </th>
+    </tr>    
+    {% endfor %}
+		
+			</table>
+		</div>
+	</div>
+
+</div>
+          
+
+   
+</table>

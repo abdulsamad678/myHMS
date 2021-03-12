@@ -1,0 +1,25 @@
+
+{%include 'hospital/admin_dashboard_cards.html'%}
+{% block content %}
+<div class="add" style="margin-left: 160px;">
+    <form action="add" method="POST">
+        {% csrf_token%}
+        <table class="table">
+            <label>ID:<div>{{ form.donor_id }}</div></label>
+            
+            <label>Name:<div>{{ form.donor_name }}</div></label>
+            
+            <label>Blood Group:<div>{{ form.donor_blood_group }}</div></label>
+            
+            <label>Email:<div>{{ form.donor_email }}</div></label>
+            
+            <label>Contact:<div>{{ form.donor_contact }}</div></label>
+            
+            <button type="submit" class="btn btn-primary">Add</button>
+        
+        </table>
+    
+        
+    </form>
+</div>
+{% endblock %}

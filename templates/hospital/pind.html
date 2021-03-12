@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRM</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="col-md-7">
+		<h5>PRESCRIPTION FOR PATIENT</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="">Add Prescription here</a>
+			<table class="table table-sm">
+
+
+<div class="add" style="margin-left: 160px;">
+    <form action="padd" method="POST">
+        {% csrf_token%}
+        <table class="table">
+            
+
+            <label>Medicine:<div>{{ form.medicine }}</div></label>
+            
+            <label>diet_advice:<div>{{ form.diet_advice}}</div></label>
+            
+            <label>test:<div>{{ form.test }}</div></label>
+            
+            
+            
+            <button type="submit" class="btn btn-primary">submit</button>
+        
+        </table>
+    
+        
+    </form>
+</div>

@@ -1,0 +1,39 @@
+{%include 'hospital/admin_dashboard_cards.html'%}
+<br>
+
+       <div class="container">
+  <div class="row">
+    <div class="panel panel-primary col-md-7" style="margin-left:%;">
+      <div class="panel-heading" style="text-align:center;">
+        <h6 class="panel-title">Information</h6>
+      </div>
+      <table class="table table-hover" id="dev-table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>blood-group</th>
+            <th>email</th>
+            <th>contact</th>
+            <th>Action</th>
+
+
+          </tr>
+        </thead>
+
+    {% for i in donor_form %}
+    <tr>
+    
+        <th>{{ i.donor_id }}</th>
+        <th>{{ i.donor_name }}</th>
+        <th>{{ i.donor_blood_group }}</th>
+        <th>{{ i.donor_email }}</th>
+        <th>{{ i.donor_contact }}</th>
+        <th>
+            <a class="btn btn-info" href="edit/{{ i.id }}">Edit</a>
+        
+            <a class="btn btn-danger" href="delete/{{ i.id }}">Delete</a>
+        </th>
+    </tr>    
+    {% endfor %}
+</table>
